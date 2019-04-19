@@ -31,8 +31,8 @@ def create_confussion_matrix(predict, actual, no_classes):
         print()
 
 # Read data in LIBSVM format
-y_train, x_train = svm_read_problem('input/skin_training2')
-y_predict, x_predict = svm_read_problem('input/skin_predict2')
+y_train, x_train = svm_read_problem('input/skin/skin_training2')
+y_predict, x_predict = svm_read_problem('input/skin/skin_predict2')
 executor = ThreadPoolExecutor(max_workers=3)
 
 parameters = [
