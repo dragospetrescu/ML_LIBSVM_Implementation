@@ -1,25 +1,38 @@
 from concurrent.futures import ThreadPoolExecutor
+import numpy
 
 from svmutil import *
 
 
-def run_svm(parameter, y_train, x_train, y_predict, x_predict):
-    m = svm_train(y_train[:500], x_train[:500], parameter)
-    p_label, p_acc, p_val = svm_predict(y_predict[:200], x_predict[:200], m)
+def run_svm(parameter, y_train, x_train, y_predict, x_predict, no_classes):
+    print('Parameters: ' + parameter)
+    print('Marime set test: ' + str(len(y_predict)))
 
-    print(p_label)
+    m = svm_train(y_train, x_train, parameter)
+    p_label, p_acc, p_val = svm_predict(y_predict, x_predict, m)
+    print(p_acc)
 
-    folder_name = parameter.replace(" ", "")
-    f = open("results/skin/" + str(folder_name), "w+")
+    print('Matrice de confuzie set date testare')
+    create_confussion_matrix(p_label, y_predict, no_classes)
 
-    f.write(str(parameter) + "\r\n")
-    f.write(str(p_acc) + "\r\n")
-    f.close()
+    p_label, p_acc, p_val = svm_predict(y_train, x_train, m)
+    print('Matrice de confuzie set date antrenare')
+    create_confussion_matrix(p_label, y_train, no_classes)
 
+
+def create_confussion_matrix(predict, actual, no_classes):
+    matrix = numpy.zeros(shape=(no_classes,no_classes))
+    for i in range(0, len(predict)):
+        matrix[int(actual[i]) - 1][int(predict[i]) - 1] += 1
+
+    for i in range(0, no_classes):
+        for j in range(0, no_classes):
+            print(str(int(matrix[i][j])) + ' ', end="", flush=True)
+        print()
 
 # Read data in LIBSVM format
-y_train, x_train = svm_read_problem('input/skin_training')
-y_predict, x_predict = svm_read_problem('input/skin_predict')
+y_train, x_train = svm_read_problem('input/skin_training2')
+y_predict, x_predict = svm_read_problem('input/skin_predict2')
 executor = ThreadPoolExecutor(max_workers=3)
 
 parameters = [
@@ -52,9 +65,5 @@ parameters = [
     '-t 3 -r -0.1'
 ]
 for parameter in parameters:
-    executor.submit(run_svm(parameter, y_train, x_train, y_predict, x_predict))
+    executor.submit(run_svm(parameter, y_train[:5000], x_train[:5000], y_predict[:1000], x_predict[:1000], 2))
 executor.shutdown(wait=True)
-
-
-
-
