@@ -1,0 +1,50 @@
+.........................*.......*
+optimization finished, #iter = 32382
+nu = 0.002597
+obj = -30.010502, rho = 0.966017
+nSV = 6993, nBSV = 22
+Total nSV = 6993
+.........................*......*
+optimization finished, #iter = 31812
+nu = 0.002279
+obj = -26.509284, rho = 0.974765
+nSV = 7365, nBSV = 17
+Total nSV = 7365
+..............................*......*
+optimization finished, #iter = 36524
+nu = 0.003083
+obj = -36.633726, rho = 0.977429
+nSV = 7459, nBSV = 26
+Total nSV = 7459
+............................*....*
+optimization finished, #iter = 32422
+nu = 0.001949
+obj = -21.881135, rho = 0.967194
+nSV = 6970, nBSV = 13
+Total nSV = 6970
+..................................*..*
+optimization finished, #iter = 36282
+nu = 0.002600
+obj = -30.548451, rho = 0.969977
+nSV = 7702, nBSV = 21
+Total nSV = 7702
+Line search fails in two-class probability estimates
+..................................*.......*
+optimization finished, #iter = 41876
+nu = 0.002998
+obj = -44.354650, rho = 0.970993
+nSV = 8335, nBSV = 32
+Total nSV = 8335
+...........................*................*.*
+optimization finished, #iter = 44300
+nu = 0.001525
+obj = -16.717820, rho = -0.973696
+nSV = 6215, nBSV = 9
+Total nSV = 6215
+.........................*......................*....*
+optimization finished, #iter = 50732
+nu = 0.001404
+obj = -15.947220, rho = -0.984931
+nSV = 6210, nBSV = 9
+Total nSV = 6210
+..................

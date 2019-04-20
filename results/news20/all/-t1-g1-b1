@@ -1,0 +1,43 @@
+...........................*.....*
+optimization finished, #iter = 32285
+nu = 0.002028
+obj = -24.926162, rho = 0.943886
+nSV = 6304, nBSV = 19
+Total nSV = 6304
+............................*...*
+optimization finished, #iter = 31975
+nu = 0.001833
+obj = -22.683330, rho = 0.960106
+nSV = 6747, nBSV = 15
+Total nSV = 6747
+.............................*......*
+optimization finished, #iter = 35211
+nu = 0.002620
+obj = -32.699531, rho = 0.964705
+nSV = 7057, nBSV = 24
+Total nSV = 7057
+...........................*..*
+optimization finished, #iter = 29176
+nu = 0.001398
+obj = -16.909255, rho = 0.945258
+nSV = 6234, nBSV = 10
+Total nSV = 6234
+...............................*
+optimization finished, #iter = 31276
+nu = 0.002147
+obj = -26.686416, rho = 0.952920
+nSV = 7100, nBSV = 19
+Total nSV = 7100
+.................................*....*
+optimization finished, #iter = 37511
+nu = 0.002507
+obj = -38.971932, rho = 0.952844
+nSV = 7547, nBSV = 29
+Total nSV = 7547
+...........................*.................*..*
+optimization finished, #iter = 45538
+nu = 0.001152
+obj = -14.339728, rho = -0.973700
+nSV = 6219, nBSV = 9
+Total nSV = 6219
+................
