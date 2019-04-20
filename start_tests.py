@@ -33,5 +33,5 @@ parameters = [
 ]
 for i in range(0, len(parameters)):
     parameter = parameters[i]
-    executor.submit(threaded_func(parameter))
+    executor.submit(threaded_func, parameter)
 executor.shutdown(wait=True)
