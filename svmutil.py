@@ -177,7 +177,7 @@ def svm_predict(y, x, m, options=""):
 	if (not isinstance(y, (list, tuple))) and (not (scipy and isinstance(y, scipy.ndarray))):
 		raise TypeError("type of y: {0} is not supported!".format(type(y)))
 
-	predict_probability = 1
+	predict_probability = 0
 	argv = options.split()
 	i = 0
 	while i < len(argv):
@@ -222,7 +222,6 @@ def svm_predict(y, x, m, options=""):
 			pred_labels += [label]
 			pred_values += [values]
 	else:
-		print('AICI ' + str(predict_probability))
 		if is_prob_model:
 			info("Model supports probability estimates, but disabled in predicton.")
 		if svm_type in (ONE_CLASS, EPSILON_SVR, NU_SVC):
