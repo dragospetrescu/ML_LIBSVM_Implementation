@@ -1,7 +1,9 @@
 from concurrent.futures import ThreadPoolExecutor
 import numpy
 import random
+import sys
 from svmutil import *
+import datetime
 
 
 def one_vs_all_predict(y_predict, x_predict, svms, no_classes):
@@ -64,7 +66,6 @@ def run_svm(parameter, y_train, x_train, y_predict, x_predict, no_classes):
     svms = []
 
     for clss in range(1, no_classes + 1):
-        print(clss)
         svm = svm_train(y_map[clss], x_train, parameter)
         svms.append(svm)
 
@@ -73,13 +74,16 @@ def run_svm(parameter, y_train, x_train, y_predict, x_predict, no_classes):
     print('Parameters: ' + parameter)
     print('Marime set test: ' + str(len(y_predict)))
 
-    print('Success rate: ' + str(accuracy))
-    print('Error rate: ' + str(error))
+    print('Success rate predicting: ' + str(accuracy))
+    print('Error rate predicting: ' + str(error))
 
     print('Matrice de confuzie set date testare')
     create_confussion_matrix(my_label, y_predict, no_classes)
 
     my_label, accuracy, error = one_vs_all_predict(y_train, x_train, svms, no_classes)
+    print('Success rate training: ' + str(accuracy))
+    print('Error rate training: ' + str(error))
+
     print('Matrice de confuzie set date antrenare')
     create_confussion_matrix(my_label, y_train, no_classes)
 
@@ -95,39 +99,13 @@ def create_confussion_matrix(predict, actual, no_classes):
         print()
 
 # Read data in LIBSVM format
+
+parameter = ''
+for i in range(1, len(sys.argv)):
+    parameter = str(parameter) + str(sys.argv[i]) + ' '
+print('Date: ' + str(datetime.datetime.now()))
+
 y_train, x_train = svm_read_problem('input/news20/news20_training')
 y_predict, x_predict = svm_read_problem('input/news20/news20_predict')
-executor = ThreadPoolExecutor(max_workers=3)
 
-parameters = [
-    # '-t 0',
-    # '-t 1 -d 3',
-    # '-t 1 -d 2',
-    # '-t 1 -d 1',
-    # '-t 1 -d 5',
-    # '-t 1 -g 0.0001',
-    # '-t 1 -g 0.1',
-    # '-t 1 -g 0.5',
-    # '-t 1 -g 1',
-    # '-t 1 -r 0',
-    # '-t 1 -r 0.0001',
-    # '-t 1 -r -0.0001',
-    # '-t 1 -r 0.1',
-    # '-t 1 -r -0.1',
-    # '-t 2 -g 0.0001',
-    # '-t 2 -g 0.01',
-    # '-t 2 -g 0.5',
-    # '-t 2 -g 1',
-    # '-t 3 -g 0.0001',
-    # '-t 3 -g 0.01',
-    # '-t 3 -g 0.5',
-    # '-t 3 -g 1',
-     '-t 2 -b 1'
-    # '-t 3 -r 0.0001',
-    # '-t 3 -r -0.0001',
-    # '-t 3 -r 0.1',
-    #'-t 3 -r -0.1'
-]
-for parameter in parameters:
-    executor.submit(run_svm(parameter, y_train, x_train, y_predict, x_predict, 20))
-executor.shutdown(wait=True)
+run_svm(parameter, y_train, x_train, y_predict, x_predict, 20)
