@@ -16,26 +16,26 @@ def threaded_func(args):
     	subprocess.run(command_parts, stdout=out, stderr=out, check=True)
 
 
-executor = ThreadPoolExecutor(max_workers=3)
+executor = ThreadPoolExecutor(max_workers=4)
 
 parameters = [
     [
-    # '-t 0 -b 1',
-    # '-t 1 -b 1',
-    # '-t 1 -d 1 -b 1',
-    # '-t 1 -d 5 -b 1',
-    # '-t 1 -g 0.5 -b 1',
-    # '-t 1 -g 1 -b 1',
-    # '-t 1 -r 0.0001 -b 1',
-    # '-t 1 -r 0.1 -b 1',
-    # '-t 2 -g 0.0001 -b 1',
-    # '-t 2 -g 0.5 -b 1',
-    # '-t 2 -g 1 -b 1',
-    # '-t 3 -b 1',
-    # '-t 3 -g 0.5 -b 1',
-    # '-t 3 -g 1 -b 1',
-    # '-t 3 -r 0.0001 -b 1',
-    # '-t 3 -r 0.1 -b 1'
+    '-t 0 -b 1',
+    '-t 1 -b 1',
+    '-t 1 -d 1 -b 1',
+    '-t 1 -d 5 -b 1',
+    '-t 1 -g 0.5 -b 1',
+    '-t 1 -g 1 -b 1',
+    '-t 1 -r 0.0001 -b 1',
+    '-t 1 -r 0.1 -b 1',
+    '-t 2 -g 0.0001 -b 1',
+    '-t 2 -g 0.5 -b 1',
+    '-t 2 -g 1 -b 1',
+    '-t 3 -b 1',
+    '-t 3 -g 0.5 -b 1',
+    '-t 3 -g 1 -b 1',
+    '-t 3 -r 0.0001 -b 1',
+    '-t 3 -r 0.1 -b 1'
     ],
     [
     '-t 0',

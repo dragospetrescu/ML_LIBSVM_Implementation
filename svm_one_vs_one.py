@@ -88,4 +88,4 @@ print('Date: ' + str(datetime.datetime.now()))
 y_train, x_train = svm_read_problem('input/news20/news20_training')
 y_predict, x_predict = svm_read_problem('input/news20/news20_predict')
 
-run_svm(parameter, y_train[:1000], x_train[:1000], y_predict[:100], x_predict[:100], 20)
+run_svm(parameter, y_train, x_train, y_predict, x_predict, 20)
