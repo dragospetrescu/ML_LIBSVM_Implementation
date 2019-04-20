@@ -12,7 +12,7 @@ def one_vs_all_predict(y_predict, x_predict, svms, no_classes):
 
     for cls_minus_1 in range(0, no_classes):
         svm = svms[cls_minus_1]
-        p_label, p_acc, p_val = svm_predict(y_predict, x_predict, svm)
+        p_label, p_acc, p_val = svm_predict(y_predict, x_predict, svm, '-b 1')
 
         if p_val[0][0] > p_val[0][1]:
             max_index = 0
@@ -108,4 +108,4 @@ print('Date: ' + str(datetime.datetime.now()))
 y_train, x_train = svm_read_problem('input/news20/news20_training')
 y_predict, x_predict = svm_read_problem('input/news20/news20_predict')
 
-run_svm(parameter, y_train, x_train, y_predict, x_predict, 20)
+run_svm(parameter, y_train[:1000], x_train[:1000], y_predict[:100], x_predict[:100], 20)

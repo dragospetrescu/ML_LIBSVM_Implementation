@@ -2,6 +2,8 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy
 import random
 from svmutil import *
+import sys
+import datetime
 
 
 def one_vs_one_predict(y_predict, x_predict, svms, no_classes):
@@ -15,9 +17,6 @@ def one_vs_one_predict(y_predict, x_predict, svms, no_classes):
      for i in range(0, len(y_predict)):
          arr = matrix[i]
          possible_classes = numpy.where(arr == numpy.amax(arr))
-         print('MATRIX ' + str(arr))
-         print('ACTUAL ' + str(y_predict[i]))
-         print('POSSIBLE ' + str(possible_classes))
          my_label.append(random.choice(possible_classes)[0] + 1)
 
      success_inputs = 0.0
@@ -55,15 +54,18 @@ def run_svm(parameter, y_train, x_train, y_predict, x_predict, no_classes):
     print('Parameters: ' + parameter)
     print('Marime set test: ' + str(len(y_predict)))
 
-    print('Success rate: ' + str(accuracy))
-    print('Error rate: ' + str(error))
+    print('Success rate predicting: ' + str(accuracy))
+    print('Error rate predicting: ' + str(error))
 
     print('Matrice de confuzie set date testare')
     create_confussion_matrix(my_label, y_predict, no_classes)
 
     my_label, accuracy, error = one_vs_one_predict(y_train, x_train, svms, no_classes)
+    print('Success rate training: ' + str(accuracy))
+    print('Error rate training: ' + str(error))
+
     print('Matrice de confuzie set date antrenare')
-    create_confussion_matrix(my_label, y_predict, no_classes)
+    create_confussion_matrix(my_label, y_train, no_classes)
 
 
 def create_confussion_matrix(predict, actual, no_classes):
@@ -77,39 +79,13 @@ def create_confussion_matrix(predict, actual, no_classes):
         print()
 
 # Read data in LIBSVM format
+
+parameter = ''
+for i in range(1, len(sys.argv)):
+    parameter = str(parameter) + str(sys.argv[i]) + ' '
+print('Date: ' + str(datetime.datetime.now()))
+
 y_train, x_train = svm_read_problem('input/news20/news20_training')
 y_predict, x_predict = svm_read_problem('input/news20/news20_predict')
-executor = ThreadPoolExecutor(max_workers=3)
 
-parameters = [
-    # '-t 0',
-    # '-t 1 -d 3',
-    # '-t 1 -d 2',
-    # '-t 1 -d 1',
-    # '-t 1 -d 5',
-    # '-t 1 -g 0.0001',
-    # '-t 1 -g 0.1',
-    # '-t 1 -g 0.5',
-    # '-t 1 -g 1',
-    # '-t 1 -r 0',
-    # '-t 1 -r 0.0001',
-    # '-t 1 -r -0.0001',
-    # '-t 1 -r 0.1',
-    # '-t 1 -r -0.1',
-    # '-t 2 -g 0.0001',
-    # '-t 2 -g 0.01',
-    # '-t 2 -g 0.5',
-    # '-t 2 -g 1',
-    # '-t 3 -g 0.0001',
-    # '-t 3 -g 0.01',
-    # '-t 3 -g 0.5',
-    # '-t 3 -g 1',
-     '-t 2'
-    # '-t 3 -r 0.0001',
-    # '-t 3 -r -0.0001',
-    # '-t 3 -r 0.1',
-    #'-t 3 -r -0.1'
-]
-for parameter in parameters:
-    executor.submit(run_svm(parameter, y_train[:10000], x_train[:10000], y_predict[:200], x_predict[:200], 20))
-executor.shutdown(wait=True)
+run_svm(parameter, y_train[:1000], x_train[:1000], y_predict[:100], x_predict[:100], 20)
