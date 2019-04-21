@@ -1014,26 +1014,6 @@ Matrice de confuzie set date testare
 1 1 0 1 0 2 2 3 4 7 6 0 1 0 12 3 1 104 33 19 
 2 0 0 1 0 0 1 2 3 4 0 2 2 0 1 1 0 28 146 7 
 6 2 0 0 3 0 1 3 1 15 1 0 0 0 0 0 1 5 14 148 
-Accuracy = 1.36178% (217/15935) (classification)
-Accuracy = 1.34923% (215/15935) (classification)
-Accuracy = 1.69438% (270/15935) (classification)
-Accuracy = 2.92438% (466/15935) (classification)
-Accuracy = 2.42234% (386/15935) (classification)
-Accuracy = 3.38877% (540/15935) (classification)
-Accuracy = 2.893% (461/15935) (classification)
-Accuracy = 3.29463% (525/15935) (classification)
-Accuracy = 3.31346% (528/15935) (classification)
-Accuracy = 2.5353% (404/15935) (classification)
-Accuracy = 3.01224% (480/15935) (classification)
-Accuracy = 4.33009% (690/15935) (classification)
-Accuracy = 3.71509% (592/15935) (classification)
-Accuracy = 3.89708% (621/15935) (classification)
-Accuracy = 2.01443% (321/15935) (classification)
-Accuracy = 2.34703% (374/15935) (classification)
-Accuracy = 3.28208% (523/15935) (classification)
-Accuracy = 1.38061% (220/15935) (classification)
-Accuracy = 2.64198% (421/15935) (classification)
-Accuracy = 2.35959% (376/15935) (classification)
 Success rate training: 0.8222780043928459
 Error rate training: 0.17772199560715407
 Matrice de confuzie set date antrenare
