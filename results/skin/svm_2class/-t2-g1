@@ -1,0 +1,25 @@
+.............................................................
+WARNING: using -h 0 may be faster
+*................
+WARNING: using -h 0 may be faster
+*
+optimization finished, #iter = 77074
+nu = 0.143288
+obj = -13057.184754, rho = 0.485331
+nSV = 45013, nBSV = 5743
+Total nSV = 45013
+Date: 2019-04-21 02:38:01.309188
+Accuracy = 97.0714% (71364/73517) (classification)
+Parameters: -t 2 -g 1 
+Marime set test: 73517
+Success rate predicting: 97.07142565665085
+Error rate predicting: 0.029285743433491572
+Matrice de confuzie set date testare
+13116 2145 
+8 58248 
+Accuracy = 99.9977% (171536/171540) (classification)
+Success rate predicting: 99.99766818234815
+Error rate predicting: 2.3318176518596245e-05
+Matrice de confuzie set date antrenare
+35596 2 
+2 135940 
