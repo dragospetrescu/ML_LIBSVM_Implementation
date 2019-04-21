@@ -1,0 +1,288 @@
+Kernel: Liniar
+Parameters: -t 0 
+Average numar vectori suport: 14091.0
+Numar total numar vectori suport:14091
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 40.19478487968769
+Error rate predicting: 0.598052151203123
+Success rate predicting: 40.10901247522444
+Error rate predicting: 0.5989098752477556
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 
+Average numar vectori suport: 300.0
+Numar total numar vectori suport:300
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 92.31198226260592
+Error rate predicting: 0.07688017737394072
+Success rate predicting: 92.35921650926898
+Error rate predicting: 0.07640783490731025
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -d 1 
+Average numar vectori suport: 25705.0
+Numar total numar vectori suport:25705
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 93.32807377885388
+Error rate predicting: 0.0667192622114613
+Success rate predicting: 93.31584470094438
+Error rate predicting: 0.06684155299055614
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -d 5 
+Average numar vectori suport: 346.0
+Numar total numar vectori suport:346
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 88.79714895874423
+Error rate predicting: 0.11202851041255764
+Success rate predicting: 88.91920251836306
+Error rate predicting: 0.11080797481636936
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -g 0.5 
+Average numar vectori suport: 360.0
+Numar total numar vectori suport:360
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 30.205258647659726
+Error rate predicting: 0.6979474135234027
+Success rate predicting: 30.13174769733007
+Error rate predicting: 0.6986825230266993
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -g 1 
+Average numar vectori suport: 295.0
+Numar total numar vectori suport:295
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 90.37909599140335
+Error rate predicting: 0.09620904008596651
+Success rate predicting: 90.45761921417746
+Error rate predicting: 0.09542380785822549
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -r 0.0001 
+Average numar vectori suport: 359.0
+Numar total numar vectori suport:359
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 84.26214344981433
+Error rate predicting: 0.15737856550185672
+Success rate predicting: 84.25440130581788
+Error rate predicting: 0.15745598694182114
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Polinomial
+Parameters: -t 1 -r 0.1 
+Average numar vectori suport: 337.0
+Numar total numar vectori suport:337
+Average numar iteratii: 17154000.0
+Numar total iteratii:17154000
+Success rate predicting: 27.535127929594516
+Error rate predicting: 0.7246487207040548
+Success rate predicting: 27.594730092106794
+Error rate predicting: 0.724052699078932
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Radial
+Parameters: -t 2 -g 0.0001 
+Average numar vectori suport: 1891.0
+Numar total numar vectori suport:1891
+Average numar iteratii: 1901.0
+Numar total iteratii:1901
+Success rate predicting: 99.83813267679584
+Error rate predicting: 0.0016186732320415686
+Success rate predicting: 99.83735571878279
+Error rate predicting: 0.0016264428121720881
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Radial
+Parameters: -t 2 -g 0.5 
+Average numar vectori suport: 41385.0
+Numar total numar vectori suport:41385
+Average numar iteratii: 94954.0
+Numar total iteratii:94954
+Success rate predicting: 98.83428322700873
+Error rate predicting: 0.011657167729912809
+Success rate predicting: 99.99708522793517
+Error rate predicting: 2.9147720648245306e-05
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Radial
+Parameters: -t 2 -g 1 
+Average numar vectori suport: 45013.0
+Numar total numar vectori suport:45013
+Average numar iteratii: 77074.0
+Numar total iteratii:77074
+Success rate predicting: 97.07142565665085
+Error rate predicting: 0.029285743433491572
+Success rate predicting: 99.99766818234815
+Error rate predicting: 2.3318176518596245e-05
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Sigmoid
+Parameters: -t 3 
+Average numar vectori suport: 71196.0
+Numar total numar vectori suport:71196
+Average numar iteratii: 35598.0
+Numar total iteratii:35598
+Success rate predicting: 71.14272889263708
+Error rate predicting: 0.28857271107362925
+Success rate predicting: 70.96245773580506
+Error rate predicting: 0.2903754226419494
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Sigmoid
+Parameters: -t 3 -g 0.5 
+Average numar vectori suport: 71196.0
+Numar total numar vectori suport:71196
+Average numar iteratii: 35598.0
+Numar total iteratii:35598
+Success rate predicting: 72.34517186501081
+Error rate predicting: 0.27654828134989184
+Success rate predicting: 72.25020403404454
+Error rate predicting: 0.27749795965955465
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Sigmoid
+Parameters: -t 3 -g 1 
+Average numar vectori suport: 71196.0
+Numar total numar vectori suport:71196
+Average numar iteratii: 35598.0
+Numar total iteratii:35598
+Success rate predicting: 73.8223812179496
+Error rate predicting: 0.2617761878205041
+Success rate predicting: 73.76705141657922
+Error rate predicting: 0.2623294858342078
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Sigmoid
+Parameters: -t 3 -r 0.0001 
+Average numar vectori suport: 71196.0
+Numar total numar vectori suport:71196
+Average numar iteratii: 35598.0
+Numar total iteratii:35598
+Success rate predicting: 71.14272889263708
+Error rate predicting: 0.28857271107362925
+Success rate predicting: 70.96245773580506
+Error rate predicting: 0.2903754226419494
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
+Kernel: Sigmoid
+Parameters: -t 3 -r 0.1 
+Average numar vectori suport: 71196.0
+Numar total numar vectori suport:71196
+Average numar iteratii: 35598.0
+Numar total iteratii:35598
+Success rate predicting: 71.20938014336821
+Error rate predicting: 0.287906198566318
+Success rate predicting: 71.04290544479421
+Error rate predicting: 0.2895709455520578
+Marime set test: 73517
+Matrice de confuzie set predict
+
+
+Matrice de confuzie set train
+
+
+
